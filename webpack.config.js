@@ -20,14 +20,14 @@ module.exports = {
     },
     plugins: [
         new HTMLWebpackPlugin({
-            template: 'public/index.html'
+            template: '../public/index.html'
         }),
     ],
     module: {
         rules: [
             {
                 test: /\.s[ac]ss$/,
-                use: ['style-loader', 'css-loader', 'scss-loader ']
+                use: ['style-loader', 'css-loader', 'sass-loader']
             },    
             {
                 test: /\.m?js$/,
