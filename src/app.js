@@ -1,10 +1,12 @@
 import React from 'react';
-import { createRoot } from 'react-dom/client';
+import { GameBoard } from './components/GameBoard/GameBoard';
 
 export const App = () => {
     return (
         <div className='wrapper'>
-            <h1>Hi</h1>
+            <GameBoard>
+
+            </GameBoard>
         </div>
     );
 }
