@@ -1,12 +1,12 @@
 import React from 'react';
 import { GameBoard } from './components/GameBoard/GameBoard';
+import { Header } from './Layout/Header/Header';
 
 export const App = () => {
     return (
         <div className='wrapper'>
-            <GameBoard>
-
-            </GameBoard>
+            <Header></Header>
+            <GameBoard />
         </div>
     );
 }
