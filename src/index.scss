@@ -5,6 +5,13 @@
     font-style: normal;
 }
 
+@font-face {
+	font-family: 'Playfair Display';
+	src: url('../public/fonts/PlayfairDisplay-Regular.ttf') format(truetype);
+	font-weight: 400;
+	font-style: normal
+}
+
 *{
 	padding: 0;
 	margin: 0;
