@@ -22,7 +22,7 @@
         transform-style: preserve-3d;
         .back {
             @extend %card-content;
-            background: linear-gradient(30deg, rgba(80,22,0,0.9304096638655462) 0%, rgba(121,44,9,1) 13%, rgba(255,141,0,1) 100%);
+            background: linear-gradient(30deg, rgba(80,22,0,0.9304096638655462) 0%, rgba(104,46,25,1) 15%, rgba(200,78,34,1) 100%);
         }
         .face {
             @extend %card-content;
