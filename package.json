@@ -4,7 +4,8 @@
   "description": "test task for the best IT company JetRuby",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --mode development --open"
+    "dev": "webpack-dev-server --mode development --open",
+    "build": "webpack --mode production"
   },
   "repository": {
     "type": "git",
@@ -31,15 +32,17 @@
     "html-webpack-plugin": "^5.6.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-redux": "^9.1.0",
+    "redux": "^5.0.1",
     "sass": "^1.71.1",
     "sass-loader": "^14.1.1",
     "scss-loader": "^0.0.1",
     "style-loader": "^3.3.4",
     "webpack": "^5.90.3",
     "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^5.0.2"
+    "webpack-dev-server": "^5.0.2",
+    "copy-webpack-plugin": "^12.0.2"
   },
   "dependencies": {
-    "copy-webpack-plugin": "^12.0.2"
   }
 }
