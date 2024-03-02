@@ -12,7 +12,7 @@ export const App = () => {
                 <GameBoard />
             </Main>
             <Footer>
-                <p>by DmitriX</p>
+                <a href={'https://github.com/DmitryKhaljapin/flipping-tiles'} target="_blank">by DmitriX</a>
             </Footer>
         </div>
     );
