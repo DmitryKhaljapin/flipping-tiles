@@ -26,7 +26,6 @@
         }
         .face {
             @extend %card-content;
-            background: rgb(50, 184, 27);
             transform: rotateY(180deg);
         }
     }
