@@ -11,7 +11,7 @@ export const tilesReducer = (state = initialState, action) => {
     switch(action.type) {
         case 'SET_DISAPPERED': {
             const newTilesList = state.tiles.map(tile => {
-                if (action.payload.some(selectedTile => selectedTile.id === tile.id)) tile.disappered = true;
+                if (action.payload.some(selectedTile => selectedTile.id === tile.id)) tile.isDisappered = true;
                 return tile
             })
             return {
