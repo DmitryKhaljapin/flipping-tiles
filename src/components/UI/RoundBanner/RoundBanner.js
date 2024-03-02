@@ -1,8 +1,9 @@
 import React from 'react';
 import styles from './RoundBanner.module.scss';
+import cn from 'classnames';
 
-export const RoundBanner = () => {
+export const RoundBanner = ({className}) => {
     return (
-        <p className={styles.banner}>Round <span className={styles.number}>1</span></p>
+        <p className={cn(styles.banner, className)}>Round <span className={styles.number}>1</span></p>
     )
 };
