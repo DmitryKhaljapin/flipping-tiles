@@ -14,8 +14,8 @@ export const Tile = () => {
             })}
                 onClick={() => setFlipped(true)}
             >
-                <div className={styles.back}></div>
                 <div className={styles.face}></div>
+                <div className={styles.back}></div>
             </div>
         </Card>
     )
