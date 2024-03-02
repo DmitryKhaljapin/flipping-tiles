@@ -32,4 +32,20 @@
     .flipped {
         transform: rotateY(180deg);
     }
+    .disappered {
+        transition: none;
+        animation-name: fadeOut;
+        animation-duration: 0.8s;
+        animation-fill-mode: forwards;
+    }
+}
+
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1
+    }
+    100% {
+        opacity: 0
+    }
 }

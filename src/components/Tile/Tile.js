@@ -5,7 +5,7 @@ import cn from 'classnames';
 import { useSelector, useDispatch } from 'react-redux';
 import { addTileAction } from '@/store/Reducers/selectedTilesReducer'; 
 
-export const Tile = ({id, faceColor}) => {
+export const Tile = ({id, faceColor, isDisappered}) => {
 
     const dispatch = useDispatch();
     const selectedTiles = useSelector(store => store.selectedTiles.selectedTiles);
@@ -17,7 +17,8 @@ export const Tile = ({id, faceColor}) => {
     return (
         <div className={styles.tile}>
             <div className={cn(styles.inner, {
-                [styles.flipped]: selectedTiles.some(tile => tile.id === id)
+                [styles.flipped]: !isDisappered && selectedTiles.some(tile => tile.id === id),
+                [styles.disappered]: isDisappered,
             })}
                 onClick={clickHandler}
             >
