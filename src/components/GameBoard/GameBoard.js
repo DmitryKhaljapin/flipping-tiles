@@ -3,9 +3,7 @@ import { Card } from '../UI'
 import styles from './GameBoard.module.scss';
 import { Tile } from '../Tile/Tile';
 import { useSelector, useDispatch } from 'react-redux';
-import { clearSelectedTilesListAction } from '../../store/Reducers/selectedTilesReducer';
-import { setDisapperedAction } from '../../store/Reducers/tilesReducer';
-import { incrementRoundCounterAction } from '../../store/Reducers/roundReducer';
+import { clearSelectedTilesListAction, setDisapperedAction, incrementRoundCounterAction } from '../../store/Reducers';
 
 export const GameBoard = () => {
 
