@@ -6,6 +6,7 @@ const initialState = {
 }
 
 const SET_DISAPPERED = 'SET_DISAPPERED';
+const RESET_DISAPPERED = 'RESET_DISAPPERED';
 
 export const tilesReducer = (state = initialState, action) => {
     switch(action.type) {
@@ -18,6 +19,11 @@ export const tilesReducer = (state = initialState, action) => {
                 tiles: newTilesList
             };
         }
+        case 'RESET_DISAPPERED': {
+            return {
+                tiles: shuffle(createTiles())
+            };
+        }
         default: {
             return state;
         } 
@@ -25,3 +31,4 @@ export const tilesReducer = (state = initialState, action) => {
 }
 
 export const setDisapperedAction = (payload) => ({type: SET_DISAPPERED, payload});
+export const resetDispperedAction = () => ({type: RESET_DISAPPERED});
