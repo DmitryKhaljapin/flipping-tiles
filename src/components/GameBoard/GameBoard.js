@@ -5,16 +5,23 @@ import { Tile } from '../Tile/Tile';
 import { useSelector, useDispatch } from 'react-redux';
 import { clearSelectedTilesListAction } from '../../store/Reducers/selectedTilesReducer';
 import { setDisapperedAction } from '../../store/Reducers/tilesReducer';
+import { incrementRoundCounterAction } from '../../store/Reducers/roundReducer';
 
 export const GameBoard = () => {
 
     const dispatch = useDispatch();
     const tiles = useSelector(state => state.tiles.tiles);
     const selectedTiles = useSelector(store => store.selectedTiles.selectedTiles);
+    const roundCounter = useSelector(store => store.round.roundCounter);
 
     useEffect(() => {
         if (selectedTiles.length === 2) setTimeout(() => {
-            if (selectedTiles[0].color === selectedTiles[1].color) dispatch(setDisapperedAction(selectedTiles))
+            if (selectedTiles[0].color === selectedTiles[1].color) {
+                dispatch(setDisapperedAction(selectedTiles))
+            } 
+            else {
+                dispatch(incrementRoundCounterAction())
+            }
             dispatch(clearSelectedTilesListAction());
         }, 800)
     }, [selectedTiles]);
