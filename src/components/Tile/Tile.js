@@ -22,7 +22,7 @@ export const Tile = ({id, faceColor, isDisappered}) => {
             })}
                 onClick={clickHandler}
             >
-                <Card className={styles.face}></Card>
+                <Card className={styles.face} style={{background: faceColor}}></Card>
                 <Card className={styles.back}></Card>
             </div>
         </div>
