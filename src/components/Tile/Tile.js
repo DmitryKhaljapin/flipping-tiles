@@ -8,15 +8,15 @@ export const Tile = () => {
     const [flipped, setFlipped] = useState(false);
 
     return (
-        <Card className={styles.tile}>
+        <div className={styles.tile}>
             <div className={cn(styles.inner, {
                 [styles.flipped]: flipped
             })}
                 onClick={() => setFlipped(true)}
             >
-                <div className={styles.face}></div>
-                <div className={styles.back}></div>
+                <Card className={styles.face}></Card>
+                <Card className={styles.back}></Card>
             </div>
-        </Card>
+        </div>
     )
 }
