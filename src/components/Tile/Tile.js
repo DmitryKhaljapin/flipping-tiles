@@ -13,6 +13,7 @@ export const Tile = ({id, color, isDisappered}) => {
     const [faceColor, setFaceColor] = useState('#FFFFFFF');
 
     function clickHandler() {
+        if (selectedTiles.length === 2) return;
         dispatch(addTileAction({id, color}));
         setFaceColor(color);
     }
