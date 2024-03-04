@@ -27,7 +27,7 @@ export const GameBoard = () => {
 
     return (
         <Card className={styles['game-board']}>
-            {tiles.map(tile => <Tile key={tile.id} id={tile.id} faceColor={tile.color} isDisappered={tile?.isDisappered} />)}
+            {tiles.map(tile => <Tile key={tile.id} id={tile.id} color={tile.color} isDisappered={tile?.isDisappered} />)}
         </Card>
     );
 }

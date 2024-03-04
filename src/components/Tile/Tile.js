@@ -1,17 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Card } from '../UI';
 import styles from './Tile.module.scss';
 import cn from 'classnames';
 import { useSelector, useDispatch } from 'react-redux';
 import { addTileAction } from '@/store/Reducers'; 
 
-export const Tile = ({id, faceColor, isDisappered}) => {
+export const Tile = ({id, color, isDisappered}) => {
 
     const dispatch = useDispatch();
     const selectedTiles = useSelector(store => store.selectedTiles.selectedTiles);
 
+    const [faceColor, setFaceColor] = useState('#FFFFFFF');
+
     function clickHandler() {
-        dispatch(addTileAction({id, color: faceColor}));
+        dispatch(addTileAction({id, color}));
+        setFaceColor(color);
     }
 
     return (
