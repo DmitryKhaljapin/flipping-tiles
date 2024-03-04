@@ -11,7 +11,7 @@ export const ModulWindow = ({message, buttonText, buttonAction}) => {
             {createPortal(<Card className={stlyes.modal}>
                 {message}
                 <Button onClick={buttonAction}>{buttonText}</Button>
-            </Card>, document.getElementById('modul'))}
+            </Card>, document.getElementById('modal'))}
         </div>
     );
 }

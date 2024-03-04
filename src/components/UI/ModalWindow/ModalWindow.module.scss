@@ -4,7 +4,7 @@
     flex-direction: column;
     align-items: center;
     top: 35vh;
-    left: 10%;
+    left: 25%;
     width: 50%;
     z-index: 100;
     overflow: hidden;
@@ -15,12 +15,13 @@
       background: linear-gradient(to bottom, #cfc09f 22%, #634f2c 24%, #cfc09f 26%, #cfc09f 27%, #ffecb3 40%, #3a2c0f 78%);
       color: #fff;
       text-transform: uppercase;
-      font-size: 2rem;
+      font-size: 1.5rem;
       background-clip: text;
       -webkit-text-fill-color: transparent;
       margin: 0;
       font-weight: 400;
       margin-bottom: 30px;
+      text-align: center;
     }
 }
 
@@ -28,6 +29,9 @@
     .modal {
       left: calc(50% - 25rem);
       width: 50rem;
+      p {
+        font-size: 2rem;
+      }
     }
   }
   
