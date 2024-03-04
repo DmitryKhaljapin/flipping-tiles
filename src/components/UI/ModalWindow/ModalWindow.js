@@ -2,15 +2,16 @@ import React from 'react';
 import stlyes from './ModalWindow.module.scss';
 import { Card, Button } from '../';
 import { Backdrop } from './Backdrop/Backdrop';
+import { createPortal } from 'react-dom'
 
-export const ModulWindow = ({message}) => {
+export const ModulWindow = ({message, buttonText, buttonAction}) => {
     return (
         <div>
-            <Backdrop />
-            <Card className={stlyes.modal}>
-                <p className={stlyes.message}>{message}</p>
-                <Button>Retry</Button>
-            </Card>
+            {createPortal(<Backdrop />, document.getElementById('backdrop'))}
+            {createPortal(<Card className={stlyes.modal}>
+                {message}
+                <Button onClick={buttonAction}>{buttonText}</Button>
+            </Card>, document.getElementById('modul'))}
         </div>
     );
 }
