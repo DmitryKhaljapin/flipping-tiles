@@ -3,16 +3,17 @@ import { Card } from '../UI'
 import styles from './GameBoard.module.scss';
 import { Tile } from '../Tile/Tile';
 import { useSelector, useDispatch } from 'react-redux';
-import { clearSelectedTilesListAction, setDisapperedAction, incrementRoundCounterAction } from '../../store/Reducers';
+import { clearSelectedTilesListAction, setDisapperedAction, incrementRoundCounterAction, finishTheGameAction } from '../../store/Reducers';
 
 export const GameBoard = () => {
 
     const dispatch = useDispatch();
     const tiles = useSelector(state => state.tiles.tiles);
-    const selectedTiles = useSelector(store => store.selectedTiles.selectedTiles);
-    const roundCounter = useSelector(store => store.round.roundCounter);
+    const selectedTiles = useSelector(store => store.selectedTiles.selectedTiles)
 
     useEffect(() => {
+        if (tiles.every(tile => tile?.isDisappered)) dispatch(finishTheGameAction())
+
         if (selectedTiles.length === 2) setTimeout(() => {
             if (selectedTiles[0].color === selectedTiles[1].color) {
                 dispatch(setDisapperedAction(selectedTiles))
