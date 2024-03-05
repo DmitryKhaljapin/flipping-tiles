@@ -24,6 +24,14 @@ module.exports = {
         new HTMLWebpackPlugin({
             template: '../public/index.html'
         }),
+        new CopyWebpackPlugin({
+            patterns: [
+                {
+                    from: '../public/favicon.ico',
+                    to: path.resolve(__dirname, 'dist')
+                }
+            ]
+        })
     ],
     module: {
         rules: [
