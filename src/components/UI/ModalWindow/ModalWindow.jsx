@@ -1,6 +1,6 @@
 import React from 'react';
 import stlyes from './ModalWindow.module.scss';
-import { Card, Button } from '../';
+import { Card, Button } from '..';
 import { Backdrop } from './Backdrop/Backdrop';
 import { createPortal } from 'react-dom'
 

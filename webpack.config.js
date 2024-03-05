@@ -13,7 +13,8 @@ module.exports = {
         alias: {
             '@': path.resolve(__dirname, 'src'),
             '@components': path.resolve(__dirname, 'src/components'),
-        }
+        },
+        extensions: ['.js', '.jsx', '.json'],
     },
     devServer: {
         port: 3000,
@@ -31,7 +32,7 @@ module.exports = {
                 use: ['style-loader', 'css-loader', 'sass-loader']
             },    
             {
-                test: /\.m?js$/,
+                test: /\.m?jsx?$/,
                 exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader',
