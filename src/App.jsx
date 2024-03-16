@@ -58,7 +58,7 @@ export const App = () => {
                 {mainContent}
             </Main>
             <Footer>
-                <a href={'https://github.com/DmitryKhaljapin/flipping-tiles'} target="_blank">by DmitriX</a>
+                <a href={'https://github.com/DmitryKhaljapin/flipping-tiles'} target='_blank'>by DmitriX</a>
             </Footer>
         </div>
     );
