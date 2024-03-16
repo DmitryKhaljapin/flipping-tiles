@@ -1,5 +1,5 @@
 import { legacy_createStore, combineReducers } from 'redux';
-import { tilesReducer, selectedTilesReducer, roundReducer, gameReducer } from './Reducers';
+import { tilesReducer, selectedTilesReducer, roundReducer, gameReducer } from './reducers';
 
 const rootReducer = combineReducers({
     tiles: tilesReducer,

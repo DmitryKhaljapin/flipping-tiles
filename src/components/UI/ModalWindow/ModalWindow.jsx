@@ -6,12 +6,12 @@ import { createPortal } from 'react-dom'
 
 export const ModulWindow = ({message, buttonText, buttonAction}) => {
     return (
-        <div>
+        <>
             {createPortal(<Backdrop />, document.getElementById('backdrop'))}
             {createPortal(<Card className={stlyes.modal}>
                 {message}
                 <Button onClick={buttonAction}>{buttonText}</Button>
             </Card>, document.getElementById('modal'))}
-        </div>
+        </>
     );
 }

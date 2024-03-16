@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Header.module.scss';
 import { Button, RoundBanner } from '@/components/UI';
-import { resetRoundCounterAction, clearSelectedTilesListAction, resetDispperedAction } from '@/store/Reducers'
+import { resetRoundCounterAction, clearSelectedTilesListAction, resetDispperedAction } from '@/store/actions'
 import { useDispatch } from 'react-redux';
 
 export const Header = () => {

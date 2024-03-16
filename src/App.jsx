@@ -5,7 +5,7 @@ import { Main } from './Layout/Main/Main';
 import { Footer } from './Layout/Footer/Footer';
 import { RoundBanner, ModulWindow } from './components/UI';
 import { useSelector, useDispatch } from 'react-redux';
-import { startTheGameAction, resetDispperedAction, clearSelectedTilesListAction, resetRoundCounterAction } from '@/store/Reducers';
+import { startTheGameAction, resetDispperedAction, clearSelectedTilesListAction, resetRoundCounterAction } from '@/store/actions';
 
 export const App = () => {
 

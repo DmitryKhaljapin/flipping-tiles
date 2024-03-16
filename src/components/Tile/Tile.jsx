@@ -3,7 +3,7 @@ import { Card } from '../UI';
 import styles from './Tile.module.scss';
 import cn from 'classnames';
 import { useSelector, useDispatch } from 'react-redux';
-import { addTileAction } from '@/store/Reducers'; 
+import { addTileAction } from '@/store/actions'; 
 
 export const Tile = ({id, color, isDisappered}) => {
 
