@@ -41,7 +41,7 @@ export const App = () => {
         }
         case 'finished': {
             mainContent = <ModulWindow 
-                message={<><p>Graet job!!!</p><p>You finished the game at round <span style={{fontSize: '3rem'}}>{roundCounter}</span></p></>}
+                message={<><p>Great job!!!</p><p>You finished the game at round <span style={{fontSize: '3rem'}}>{roundCounter}</span></p></>}
                 buttonText={'play again'}
                 buttonAction={restart}
             />
