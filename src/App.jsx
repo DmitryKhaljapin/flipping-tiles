@@ -24,23 +24,38 @@ export const App = () => {
         dispatch(startTheGameAction());
     }
 
+    let mainContent;
+
+    switch (gameStatus) {
+        case 'beforeStart': {
+            mainContent = <ModulWindow 
+                message={<><p>Graet job!!!</p><p>You finished the game at round <span style={{fontSize: '3rem'}}>{roundCounter}</span></p></>}
+                buttonText={'play again'}
+                buttonAction={restart}
+            />
+            break;
+        }
+        case 'started': {
+            mainContent = <GameBoard />
+            break;
+        }
+        case 'finished': {
+            mainContent = <ModulWindow 
+                message={<><p>Graet job!!!</p><p>You finished the game at round <span style={{fontSize: '3rem'}}>{roundCounter}</span></p></>}
+                buttonText={'play again'}
+                buttonAction={restart}
+            />
+            break;
+        }
+    } 
+
     return (
         <div className='wrapper'>
             <Header>
                 <RoundBanner />
             </Header>
             <Main>
-                {gameStatus === 'beforeStart' && <ModulWindow 
-                    message={<><p>You have to find tiels with the same color</p><p>Click the tile to see its color</p></>} 
-                    buttonText={'start'}
-                    buttonAction={start}
-                />}
-                {gameStatus === 'started' && <GameBoard />}
-                {gameStatus === 'finished' && <ModulWindow 
-                    message={<><p>Graet job!!!</p><p>You finished the game at round <span style={{fontSize: '3rem'}}>{roundCounter}</span></p></>}
-                    buttonText={'play again'}
-                    buttonAction={restart}
-                />}
+                {mainContent}
             </Main>
             <Footer>
                 <a href={'https://github.com/DmitryKhaljapin/flipping-tiles'} target="_blank">by DmitriX</a>
